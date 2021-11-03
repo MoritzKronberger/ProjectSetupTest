@@ -30,7 +30,7 @@ Password: postgres
 Database: flai_db_v1
 ```
 
-## Shut down containers
+## Shut Down Containers
 
 ```bash
 docker compose down
