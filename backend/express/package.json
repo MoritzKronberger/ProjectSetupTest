@@ -5,7 +5,8 @@
   "main": "src/server.js",
   "type": "module",
   "scripts": {
-    "serve": "PORT=5000 nodemon -r src/server.js"
+    "serve": "nodemon -r dotenv/config src/server.js",
+    "prod": "node -r dotenv/config src/server.js"
   },
   "author": "",
   "license": "MIT",
