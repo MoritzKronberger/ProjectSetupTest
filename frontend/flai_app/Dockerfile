@@ -1,10 +1,10 @@
-# Vue dockerization from https://vuejs.org/v2/cookbook/dockerize-vuejs-app.html
+# Vue dockerization similar to https://vuejs.org/v2/cookbook/dockerize-vuejs-app.html
 # uses simple http server for prototyping, that should be switched to nginx or apache for serious production
 
 FROM node:lts-alpine
 
 ARG PORT
-ENV ENV_PORT=$PORT
+ENV ENV_PORT $PORT
 
 # install simple http server for serving static content
 RUN npm install -g http-server
@@ -23,7 +23,5 @@ COPY . .
 
 # build app for production with minification
 RUN npm run build
-
-EXPOSE $PORT
 
 CMD http-server dist --port $ENV_PORT

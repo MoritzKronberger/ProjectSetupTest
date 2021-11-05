@@ -1,7 +1,7 @@
 FROM node:lts-alpine
 
 ARG PORT
-ENV ENV_PORT=$PORT
+ENV ENV_PORT $PORT
 
 # make the 'flai_app' folder the current working directory
 WORKDIR /flai_express_app
@@ -14,7 +14,5 @@ RUN npm install
 
 # copy project files and folders to the current working directory (i.e. 'app' folder)
 COPY . .
-
-EXPOSE $PORT
 
 CMD PORT=$ENV_PORT node src/server.js
