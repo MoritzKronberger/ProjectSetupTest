@@ -2,6 +2,23 @@
 
 In order to run this setup [Docker Desktop](https://www.docker.com/products/docker-desktop) must be installed.
 
+## Clone Repository
+
+```bash
+git clone https://github.com/MoritzKronberger/ProjectSetupTest.git
+cd ProjectSetupTest
+```
+
+## Create .env Files
+
+.env variables can be changed by editing the bash script and executing it
+
+**Passwords for Postgres database must not be included in bash script and should be passed as parameters**
+
+```bash
+bash create_dotenv.sh <superuser username> <superuser password> <regular user username> <regular user password>
+```
+
 ## Build Images
 
 ```bash
