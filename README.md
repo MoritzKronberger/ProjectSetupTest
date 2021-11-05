@@ -5,13 +5,19 @@ In order to run this setup [Docker Desktop](https://www.docker.com/products/dock
 ## Build Images
 
 ```bash
-docker compose build
+docker-compose build
 ```
 
 ## Start Containers
 
 ```bash
-docker compose up
+docker-compose up
+```
+
+If only a certain container and its dependencies (for example the Postgres database and adminer) should be started, use:
+
+```bash
+docker-compose up postgres-db
 ```
 
 ## Access Microservices
@@ -33,5 +39,5 @@ Database: flai_db_v1
 ## Shut Down Containers
 
 ```bash
-docker compose down
+docker-compose down
 ```
