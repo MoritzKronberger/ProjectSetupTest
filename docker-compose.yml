@@ -10,8 +10,6 @@ services:
                 PORT: ${VUE_APP_CONTAINER_PORT}
         ports:
             - ${VUE_APP_HOST_PORT}:${VUE_APP_CONTAINER_PORT}
-        depends_on:
-            - express_server
     
     express-server:
         container_name: flai-express-server
@@ -22,8 +20,6 @@ services:
                 PORT: ${EXPRESS_APP_CONTAINER_PORT}
         ports:
             - ${EXPRESS_APP_HOST_PORT}:${EXPRESS_APP_CONTAINER_PORT}
-        depends_on:
-            - postgres-db
 
     postgres-db:
         container_name: flai-postgres-db
